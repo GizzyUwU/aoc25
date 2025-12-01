@@ -1,0 +1,23 @@
+{
+  "name": "aoc2025",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "scripts": {
+    "dev": "bun run src/index.ts"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@inquirer/prompts": "^8.0.1",
+    "@rwxdev/espn": "^0.0.2",
+    "boxen": "^8.0.1",
+    "chalk": "^5.6.2",
+    "node-localstorage": "^3.0.5",
+    "ora": "^9.0.0"
+  }
+}
