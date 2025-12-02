@@ -1,8 +1,11 @@
 import readLinesIterator from "../../lib/readLines";
 import path from "node:path";
+import ora from "ora";
 
 export default async function day1() {
     const inputFile = path.join(import.meta.dir, "input.txt");
+    const part1Log = ora("Calculating the parts...").start();
+    const part2Log = ora("").start();
     let dial1 = 50;
     let dial2 = 50;
     let part1 = 0;
@@ -30,6 +33,6 @@ export default async function day1() {
         }
     }
 
-    console.log("Password for part 1:", part1);
-    console.log("Password for part 2:", part2);
+    part1Log.succeed("Password for part 1: " + part1);
+    part2Log.succeed("Password for part 2: " + part2);
 }

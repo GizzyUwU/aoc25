@@ -1,4 +1,3 @@
-import ora from "ora";
 import { select } from '@inquirer/prompts';
 import fs from "fs/promises";
 import path from "path";
@@ -28,13 +27,11 @@ async function getAllDays(dir: string, baseDir = dir): Promise<{ name: string; v
 }
 
 
-const spinner = ora("Loading days...").start();
 const daysDir = path.join(import.meta.dir, "days");
 const choices = await getAllDays(daysDir);
 
-spinner.succeed("Days loaded");
 const day = await select<{ name: string; file: string }>({
-    message: "Choose an AOC 25 day",
+    message: "Choose an AOC 25 day:",
     choices
 });
 
