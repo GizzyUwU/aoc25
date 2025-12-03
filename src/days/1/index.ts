@@ -32,7 +32,11 @@ export default async function day1() {
             dial2 = (dial2 - distance + 100) % 100;
         }
     }
-
-    part1Log.succeed("Password for part 1: " + part1);
-    part2Log.succeed("Password for part 2: " + part2);
+    
+    part1Log.stopAndPersist({
+        text: "- Part 1 result: " + part1
+    })
+    part2Log.stopAndPersist({
+        text: "- Part 2 result: " + part2
+    })
 }

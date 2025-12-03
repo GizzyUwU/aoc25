@@ -45,6 +45,10 @@ export default async function day2() {
         }
     }
 
-    part1Log.succeed("Part 1 sum: " + part1);
-    part2Log.succeed("Part 2 sum: " + part2);
+    part1Log.stopAndPersist({
+        text: "- Part 1 result: " + part1
+    })
+    part2Log.stopAndPersist({
+        text: "- Part 2 result: " + part2
+    })
 }
