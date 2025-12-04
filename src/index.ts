@@ -37,7 +37,6 @@ const day = await select<{ name: string; file: string }>({
     choices
 });
 
-
 if (day.file === "all") {
     console.time("All days finished their calculations.")
     for (const choice of choices) {
