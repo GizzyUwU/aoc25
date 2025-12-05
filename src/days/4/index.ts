@@ -2,7 +2,7 @@ import readLinesIterator from "../../lib/readLines";
 import path from "node:path";
 import ora from "ora";
 
-export default async function day2() {
+export default async function day4() {
     const inputFile = path.join(import.meta.dir, "input.txt");
     const part1Log = ora("Calculating the parts...").start();
     const part2Log = ora("").start();
