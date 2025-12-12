@@ -5,10 +5,7 @@ import ora from "ora";
 export default async function day7() {
     const inputFile = path.join(import.meta.dir, "input.txt");
     const part1Log = ora("Calculating...").start();
-    const part2Log = ora("").start();
-    
     let part1 = 0;
-    let part2 = 0;
 
     const lines: string[] = [];
     for await (const line of readLinesIterator(inputFile)) {
@@ -51,5 +48,4 @@ export default async function day7() {
     }
 
     part1Log.stopAndPersist({ text: "- Part 1 result: " + part1 });
-    part2Log.stopAndPersist({ text: "- Part 2 result: " + part2 });
 }
